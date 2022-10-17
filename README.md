@@ -1,2 +1,2 @@
-# AngularWorkshop_October2022
+# Angular Workshop October 2022
 Your instructors will share code with you here.
