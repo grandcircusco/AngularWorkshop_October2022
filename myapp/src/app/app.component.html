@@ -1,0 +1,16 @@
+<h1 *ngIf="showTitle">Welcome to {{ title }}</h1>
+
+<p>There are {{ names.length }} people present.</p>
+
+<div *ngFor="let n of names; index as i">
+  <p>{{ i + 1 }}. {{ n | titlecase }}</p>
+</div>
+
+<p>I have {{ currentCash | currency }}</p>
+<p>{{ currentDate | date:'medium' }}</p>
+
+<h1>Staff</h1>
+
+<div *ngFor="let s of staff">
+  <h2>{{ s.id }}. {{ s.name }}</h2>
+</div>

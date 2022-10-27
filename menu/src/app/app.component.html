@@ -1,0 +1,15 @@
+<h1 class="title">Welcome to Chirpus Pizza</h1>
+
+<table class="table">
+  <tr>
+    <th>Item</th>
+    <th>Category</th>
+    <th>Price</th>
+  </tr>
+  <tr *ngFor="let m of Menu">
+    <td>{{ m.name }}</td>
+    <td>{{ m.category }}</td>
+    <td *ngIf="!m.discounted">{{ m.price | currency }}</td>
+    <td *ngIf="m.discounted">{{ m.price * discountedPercent | currency }} Discounted!</td>
+  </tr>
+</table>

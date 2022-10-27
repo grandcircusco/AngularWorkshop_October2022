@@ -1,0 +1,15 @@
+<h1>Welcome to {{ title }}</h1>
+
+
+<p>There are {{ names.length }} people present.</p>
+
+<form (ngSubmit)="addName()">
+  <label for="name">Enter a name!</label>
+  <input name="name" id="name" [(ngModel)]="newName" />
+  <button type="submit">Add new name</button>
+</form>
+
+<div *ngFor="let n of names; index as i">
+  <p>{{ i }}. {{ n }}</p>
+  <button (click)="changeTitle(n)">Click me!</button>
+</div>
