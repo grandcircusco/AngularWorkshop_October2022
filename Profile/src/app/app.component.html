@@ -1,0 +1,58 @@
+<div class="container">
+  <div *ngIf="!displayEdit">
+    <h1>{{ user.name }}</h1>
+    <p>Age: {{ user.age }}</p>
+    <p style="color: {{user.favoriteColor}}">Favorite Color: {{ user.favoriteColor }}</p>
+    <p>Favorite Drink: {{ user.favoriteDrink }}</p>
+    <p>Gender: {{ user.gender }}</p>
+  </div>
+  <div *ngIf="displayEdit">
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" [(ngModel)]="user.name" />
+      <br />
+
+      <label for="age">Age:</label>
+      <input type="number" name="age" id="age" [(ngModel)]="user.age" />
+      <br />
+
+      <label for="color">Color:</label>
+      <input
+        type="text"
+        name="color"
+        id="color"
+        [(ngModel)]="user.favoriteColor"
+      />
+      <br />
+
+      <select name="drink" [(ngModel)]="user.favoriteDrink">
+        <option value="Peppermint Mocha">Peppermint Mocha</option>
+        <option value="Caramel Mocha">Caramel Mocha</option>
+        <option value="Black Coffee">Black Coffee</option>
+        <option value="Water">Water</option>
+      </select>
+
+      <p>Gender</p>
+      Male:<input
+        type="radio"
+        name="gender"
+        [(ngModel)]="user.gender"
+        value="Male"
+      />
+      Female:<input
+        type="radio"
+        name="gender"
+        [(ngModel)]="user.gender"
+        value="Female"
+      />
+      Other:<input
+        type="radio"
+        name="gender"
+        [(ngModel)]="user.gender"
+        value="Other"
+      />
+    </form>
+  </div>
+
+  <button (click)="toggleEdit()">Toggle Edit</button>
+</div>
