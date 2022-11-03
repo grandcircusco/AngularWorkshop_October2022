@@ -1,0 +1,4 @@
+<h1>{{ mainName }}</h1>
+
+<app-greeter [name]="'Samuel'" (chosen)="changeName($event)"></app-greeter>
+<app-greeter (chosen)="changeName($event)"></app-greeter>

@@ -1,0 +1,8 @@
+<div class="container">
+  <app-contact
+    *ngFor="let c of contacts"
+    [contact]="c"
+    (delete)="deleteContact($event)"
+  ></app-contact>
+  <app-contact-form (newContact)="addNewContact($event)"></app-contact-form>
+</div>
