@@ -1,0 +1,16 @@
+<div class="container" *ngIf="!displayEdit">
+  <div class="left">
+    <button *ngIf="!todo.completed" (click)="completeTodo()">Complete</button>
+    <p [ngClass]="todo.completed? 'completed':''">{{ todo.task }}</p>
+  </div>
+  <div>
+    <button (click)="toggleEdit()">Toggle Edit</button>
+    <button (click)="removeTodo()">x</button>
+  </div>
+ 
+</div>
+<form *ngIf="displayEdit">
+    <input type="text" name="task" [(ngModel)]="todo.task" />
+    <button (click)="toggleEdit()">Toggle Edit</button>
+</form>
+

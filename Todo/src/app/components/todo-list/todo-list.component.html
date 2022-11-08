@@ -1,0 +1,6 @@
+<div class="container">
+    <input type="text" name="filter" [(ngModel)]="filter" placeholder="Filter todos" />
+    <p *ngIf="displayCongrats()">Good job finishing all tasks!</p>
+    <app-todo-item *ngFor="let t of getFiltered()" [todo]="t" (complete)="setComplete(t)" (remove)="removeTodo(t)"></app-todo-item>
+    <app-todo-form (save)="addTodo($event)"></app-todo-form>
+</div>
