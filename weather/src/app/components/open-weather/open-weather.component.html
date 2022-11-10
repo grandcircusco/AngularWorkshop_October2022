@@ -1,0 +1,8 @@
+<form (ngSubmit)="searchCity()">
+    <input type="text" name="city" [(ngModel)]="city" placeholder="Please enter a city" />
+    <button type="submit">Search city for weather</button>
+</form>
+
+<h1>{{ openWeather.name }}</h1>
+<p>{{ openWeather.main.temp }} F</p>
+<p>{{ openWeather.weather[0].description}}</p>

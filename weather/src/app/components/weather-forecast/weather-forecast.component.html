@@ -1,0 +1,7 @@
+<h1>Detroit Weather!</h1>
+<div *ngFor="let p of weather.properties.periods">
+    <h2>{{ p.name }}</h2>
+    <p>{{ p.temperature }} {{ p.temperatureUnit }}</p>
+    <img src="{{ p.icon }}" />
+    <p>{{ p.detailedForecast }}</p>
+</div>
