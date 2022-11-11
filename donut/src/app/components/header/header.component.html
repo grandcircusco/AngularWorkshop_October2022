@@ -1,0 +1,4 @@
+<a routerLink="/donut">Home</a>
+<br />
+<a *ngIf="getCartCount() > 0" routerLink="/cart">Cart (x{{getCartCount()}})</a>
+<a *ngIf="getCartCount() == 0" routerLink="/cart">Cart</a>
